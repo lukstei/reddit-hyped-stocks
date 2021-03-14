@@ -11,18 +11,18 @@ A web application to explore currently hyped stocks on Reddit.
 #### Hype Chart (on the top)
 
 The chart displays the currently most hyped stock tickers on Reddit. How "hype" is defined see section "How the hype scores are calculated".
-The chart shows the accumulated hype scores of the top 15 stocks. 
-By default the one week is displayed, but it is possible to further zoom in by using the lens.
+The chart shows the accumulated hype scores of the top 15 stocks.
+By default, the one week is displayed, but it is possible to further zoom in by using the lens.
 
 #### Hype table (on the left)
 
 Displays the top 30 hyped stocks, and their respective hype scores.
-The following values are displayed: 
+The following values are displayed:
 
 - Score Abs: Sum of the absolute Reddit score of all matching posts
 - Δ7d/Δ3d/Δ1d: The 7/3/1 day hype score
 
-Additionally, each row has an indication of the one day position gain/loss (two up/down arrows for more than +/- 5 positions, one up/down arrow for less than +- 5 positions, = for unchanged position).
+Additionally, each row has an indication of the one-day position gain/loss (two up/down arrows for more than +/- 5 positions, one up/down arrow for less than +- 5 positions, = for unchanged position).
 
 If a ticker is marked as buy or sell, the row background will be green or red.
 
@@ -32,7 +32,7 @@ When a ticker is clicked, the detail view is opened.
 
 ![App](images/4.png)
 
-Detailed information for on stock ticker is shown on the right.
+Detailed information for one stock ticker is shown on the right.
 
 
 #### Company details
@@ -40,7 +40,7 @@ Detailed information for on stock ticker is shown on the right.
 The first cell displays detailed information of the company including the descriptions and selected key figures. The data is queried live from Yahoo Finance.
 
 The buttons on the right allow to classify a certain ticker as:
-- buy/sell: The stock will be marked as "buy"/"sell", the current price and the current date will be remebered, and displayed persitently. The Hype table will highlight the stock ticker and also the stock ticker will stick in the Hype table (even when it falls out of the top 30).
+- buy/sell: The stock will be marked as "buy"/"sell", the current price and the current date will be remembered, and displayed persistently. The Hype table will highlight the stock ticker and also the stock ticker will stick in the Hype table (even when it falls out of the top 30).
 - neutral: To remove a classification. The stock ticker isn't sticky in the Hype table anymore.
 - blacklist: To hide the stock ticker in the hype table. Useful when a certain string is not correctly recognized as a stock ticker.
 
@@ -50,7 +50,7 @@ Shows a chart of the monthly close prices of the stock and the volume as a perce
 
 #### Weekly price/hype score
 
-Shows a chart of the weekly intraday prices of the stock (first chart) and the growth of the hype score (second chart).
+Shows a chart of the weekly intraday prices of the stock (first chart), and the growth of the hype score (second chart).
 
 #### Post list
 
@@ -65,10 +65,10 @@ For each time point (e.g. every hour) the raw posts including the absolute reddi
 
 Each post is will be tagged with one or more stock tickers (based on the headline).
 
-Then a matrix is built where each row represents one point in time and each column represents one stock ticker. 
+Then a matrix is built where each row represents one point in time and each column represents one stock ticker.
 The values of the matrix represent the sum of the absolute reddit score of all posts which are related to one stock ticker at a certain time point in time.
 
-Then the difference over time is calculated (i.e. we calculate the delta value for each point in time compared to the last value).  
+Then the difference over time is calculated (i.e. we calculate the delta value for each point in time compared to the last value).
 
 Out of the resulting matrix we can then for example calculate the 7d score by taking the sum over the delta values over the last 7 days.
 
@@ -83,7 +83,7 @@ The advantage of this more complex method compared to just taking the absolute p
 2) Checkout the detail view, check the key figures (e.g. P/E, short ratio, avg. volume last week compared to long term avg.)
 3) Look at the relative volume chart (high volume *could* indicate manipulations)
 4) Compare hype to stock price
-5) Take a detailed look at the posts table (supicious posters, upvote ratio)
+5) Take a detailed look at the posts table (suspicious posters, upvote ratio)
 6) Profit
 
 ## Getting started
@@ -105,16 +105,16 @@ The advantage of this more complex method compared to just taking the absolute p
 
 ### Collecting the raw data
 
-Since the hype score relies on the difference of the post scores, the raw Reddit post data has to queried periodically (e.g. every hour). 
+Since the hype score relies on the difference of the post scores, the raw Reddit post data has to queried periodically (e.g. every hour).
 
 Prerequisite: Get a Reddit API token:
-1) Go to https://www.reddit.com/prefs/apps 
+1) Go to https://www.reddit.com/prefs/apps
 2) Click "Create an app" and fill out the information - use "Script" type
 3) Copy the secret and app id to the file `backend/praw.ini`
 
-By default the subreddits `robinhoodpennystocks` and `pennystocks` are queried (configurable in `backend/load_data.py`). 
+By default, the subreddits `robinhoodpennystocks` and `pennystocks` are queried (configurable in `backend/load_data.py`).
 
-The data is saved into a Sqlite database. 
+The data is saved into a Sqlite database.
 To query the data use the script `backend/load_data.py` or run `./run-load-data-docker.sh`.
 
 You can for example set up a Cron job to load the data periodically.
@@ -127,7 +127,7 @@ On the backend
 
 - Python 3
 - Flask web application framework
-- sqlalchemy library 
+- sqlalchemy library
 - PRAW/yfinance to query the respective APIs
 
 On the frontend
