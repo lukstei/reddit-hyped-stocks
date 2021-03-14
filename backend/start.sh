@@ -1,0 +1,1 @@
+FLASK_ENV=development venv/bin/python server.py

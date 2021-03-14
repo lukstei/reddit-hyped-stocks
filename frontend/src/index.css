@@ -1,0 +1,29 @@
+.ticker-buy {
+    background-color: rgb(76, 175, 80);
+}
+.ticker-sell {
+    background-color: rgb(244, 67, 54);
+}
+.ticker-lost {
+    background-color: rgb(244, 168, 54);
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    margin-right: 2px;
+}
+
+.up {
+    border-color: darkgreen;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    border-color: red;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}

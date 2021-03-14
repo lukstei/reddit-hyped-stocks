@@ -1,0 +1,1 @@
+docker build -t pennystocks . && docker run --rm -it -p 5000:5000 -v $PWD/backend/data.db:/app/backend/data.db pennystocks

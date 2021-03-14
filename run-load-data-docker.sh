@@ -1,0 +1,1 @@
+docker build -t pennystocks . && docker run --rm -it -v $PWD/backend/data.db:/app/backend/data.db pennystocks load_data.py

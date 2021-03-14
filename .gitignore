@@ -1,0 +1,6 @@
+__pycache__
+backend/venv
+backend/praw.ini
+backend/settings.json
+backend/data.db
+backend/praw.ini

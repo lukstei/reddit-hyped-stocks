@@ -1,0 +1,12 @@
+Flask==1.1.2
+Flask-Cors==3.0.10
+Flask-SQLAlchemy==2.4.4
+praw==7.1.4
+SQLAlchemy==1.4.0b2
+watchdog==1.0.2
+yfinance==0.1.55
+simplejson==3.17.2
+numpy==1.20.1
+pandas==1.2.2
+cachetools==4.2.1
+tqdm==4.56.2
