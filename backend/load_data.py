@@ -8,6 +8,7 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 from models import mapper_registry, Posts
 
 subreddits_to_load = ["robinhoodpennystocks", "pennystocks"]
+posts_to_load = 1000
 
 
 engine = create_engine('sqlite:///data.db', convert_unicode=True)
@@ -40,7 +41,7 @@ def load_data(subreddits, count):
 
 if __name__ == '__main__':
     mapper_registry.metadata.create_all(bind=engine)
-    load_data("+".join(subreddits_to_load), count=100)
+    load_data("+".join(subreddits_to_load), count=posts_to_load)
     
     print("Cleaning up old data")
     db_session.query(Posts).where(Posts.date < (date.today() - timedelta(days=7))).delete()
