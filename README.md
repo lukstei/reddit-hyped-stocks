@@ -74,7 +74,7 @@ Out of the resulting matrix we can then for example calculate the 7d score by ta
 
 For the exact algorithm, check out `ticker_score_calulation.py`.
 
-The advantage of this more complex method compared to just taking the absolute post values, is (I believe) that the absolute post values does not matter too much, but really how much score one post gains/looses in a certain time period. This should more closely reflect the recent popularity (hype) of one post/ticker.
+The advantage of this more complex method compared to just taking the absolute post values, is (I believe) that the absolute post values does not matter too much, but shows how much score one post gains/looses in a certain time period. This should more closely reflect the recent popularity (hype) of one post/ticker.
 
 
 ### How to identify interesting stocks
