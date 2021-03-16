@@ -92,7 +92,7 @@ The advantage of this more complex method compared to just taking the absolute p
 ### Run the application with Docker:
 
 1) Clone or download the repository to your local computer
-2) To use the example data run `cp backend/data.db.example backend/data.db`
+2) To use the example data run `cp backend/data.db.example backend/data.db` (the example data might be outdated, run the load data script before starting the application to prevent indexing issues)
 3) Run `./run-server-docker.sh` - this will take a while to download the depedencies and build the application
 4) Open the browser at http://localhost:5000
 
