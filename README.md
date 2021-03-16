@@ -1,5 +1,8 @@
 # Reddit Hyped Stocks
 
+![CI](https://github.com/lukstei/reddit-hyped-stocks/actions/workflows/node.js.yml/badge.svg)
+
+
 A web application to explore currently hyped stocks on Reddit.
 
 ![App](images/1.png)
