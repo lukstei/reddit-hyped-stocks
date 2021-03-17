@@ -81,8 +81,10 @@ export default function () {
                                 {Object.keys(r.tickerScoreRel.values).map(k =>
                                     <Line dot={false} key={k} animationDuration={0} type="monotone" dataKey={k} stroke={color(k)}/>)
                                 }
-                                <Tooltip itemStyle={{padding: 0}} formatter={x => Math.round(x)} animationDuration={10}
-                                         itemSorter={(x) => -x.value}/>
+                                <Tooltip itemStyle={{padding: 0}} formatter={x => Math.round(x)}
+                                         animationDuration={10}
+                                         itemSorter={(x) => -x.value}
+                                         labelFormatter={l => moment(l).local().format('l')}/>
                                 <Legend/>
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <XAxis type="number" tickFormatter={(t) => moment(t).local().format('l')}
