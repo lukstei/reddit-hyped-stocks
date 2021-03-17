@@ -146,6 +146,10 @@ This application does not offer investment advice. Do you not invest what you ca
 
 This application is not affiliated with Reddit or Yahoo Finance.
 
+## Attributions
+
+Reddit Hyped Stocks is heavily inspired by https://github.com/iam-abbas/Reddit-Stock-Trends
+
 ## License
 
 MIT
