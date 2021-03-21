@@ -96,7 +96,7 @@ The advantage of this more complex method compared to just taking the absolute p
 
 1) Clone or download the repository to your local computer
 2) To use the application without your own data, you can obtain a sample database from https://drive.google.com/file/d/12aAc35F5a0_doGE7Af8xsukRyNKPo1g0/view?usp=sharing - download and copy the file to `backend/data.db` (I will try to keep it up to date)
-3) Run `./run-server-docker.sh` - this will take a while to download the depedencies and build the application
+3) Run `./run-server-docker.sh` - this will take a while to download the dependencies and build the application
 4) Open the browser at http://localhost:5000
 
 ### Run the application without Docker / Setup a dev environment
