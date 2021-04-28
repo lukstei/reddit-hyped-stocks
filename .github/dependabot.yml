@@ -1,0 +1,58 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/frontend"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@testing-library/user-event"
+    versions:
+    - 13.0.10
+    - 13.0.13
+    - 13.0.16
+    - 13.0.2
+    - 13.0.6
+    - 13.0.7
+    - 13.1.1
+    - 13.1.2
+    - 13.1.3
+  - dependency-name: d3
+    versions:
+    - 6.6.0
+    - 6.6.1
+    - 6.6.2
+  - dependency-name: "@testing-library/jest-dom"
+    versions:
+    - 5.11.10
+  - dependency-name: recharts
+    versions:
+    - 2.0.8
+- package-ecosystem: pip
+  directory: "/backend"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: sqlalchemy
+    versions:
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    - 1.4.4
+    - 1.4.5
+    - 1.4.6
+    - 1.4.7
+    - 1.4.8
+    - 1.4.9
+  - dependency-name: pandas
+    versions:
+    - 1.2.3
+  - dependency-name: watchdog
+    versions:
+    - 2.0.2
+  - dependency-name: tqdm
+    versions:
+    - 4.59.0
