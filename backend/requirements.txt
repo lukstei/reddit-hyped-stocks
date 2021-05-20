@@ -3,7 +3,7 @@ Flask-Cors==3.0.10
 Flask-SQLAlchemy==2.4.4
 praw==7.2.0
 SQLAlchemy==1.4.0b2
-watchdog==1.0.2
+watchdog==2.1.2
 yfinance==0.1.55
 simplejson==3.17.2
 numpy==1.20.1
